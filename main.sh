@@ -66,7 +66,7 @@ version_function () {
   echo $version
 }
 about_function () {
-  echo "le prompt est un shell en Bash avec des commandes de base."
+  echo "le prompt est un shell en Bash avec des commandes de base. j'aime raph"
 }
 age_function () {
   echo -n "entrez votre âge : "
