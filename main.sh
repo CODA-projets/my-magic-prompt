@@ -35,6 +35,7 @@ cmd() {
     smtp ) smtp_function $*;;
     open ) vim $1;;
     passw ) passw_function;;
+    joke ) joke;;
 
     * ) echo "commande inconnue";;
 
@@ -58,6 +59,8 @@ help_function () {
   echo "  clear : Efface l'écran"
   echo "  smtp : Envoie un e-mail via SMTP"
   echo "  open : Ouvre un fichier avec vim"
+  echo "  passw : Change le mot de passe de l'utilisateur"
+  echo "  joke : Affiche une blague"
 }
 version_function () {
   echo $version
