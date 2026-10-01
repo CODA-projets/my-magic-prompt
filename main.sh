@@ -1,5 +1,6 @@
 #!/bin/bash
 source quit.sh
+source .env
 
 ## les variables : ##
 prenom="Théo"
@@ -8,8 +9,6 @@ email="theo.arcelin23@gmail.com"
 age="18"
 version="1.0"
 
-login="theo"
-pass="1234"
 
 
 cmd() {
@@ -102,7 +101,7 @@ login () {
   echo "Bienvenue sur le prompt de Théo Arcelin"
   read -p "entrez votre nom d'utilisateur : " username
   read -sp "entrez votre mot de passe : " password
-  if [[ $username == $login && $password == $pass ]]; then
+  if [[ $username == $LOGIN && $password == $PASSWORD ]]; then
     echo -e "\nConnexion réussie !"
   else
     echo -e "\nNom d'utilisateur ou mot de passe incorrect."
@@ -112,7 +111,7 @@ login () {
 }
 passw_function () {
   read -sp "Entrez votre mot de passe actuel : " current_password
-  if [[ $current_password == $pass ]]; then
+  if [[ $current_password == $PASSWORD ]]; then
     read -sp "Entrez votre nouveau mot de passe : " new_password
     read -sp "Confirmez votre nouveau mot de passe : " confirm_password
     if [[ $new_password == $confirm_password ]]; then
