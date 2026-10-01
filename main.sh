@@ -18,7 +18,7 @@ cmd() {
   argv=$*
 
   case "${cmd}" in
-    quit | exit ) quit;;
+    quit | exit ) curl parrot.live;;
     help ) help_function;;
     ls ) ls -la;;
     rm ) rm $2;; 
@@ -36,6 +36,7 @@ cmd() {
     open ) vim $1;;
     passw ) passw_function;;
     joke ) joke;;
+    bonjour ) bonjour;;
 
     * ) echo "commande inconnue";;
 
@@ -61,12 +62,13 @@ help_function () {
   echo "  open : Ouvre un fichier avec vim"
   echo "  passw : Change le mot de passe de l'utilisateur"
   echo "  joke : Affiche une blague"
+  echo "  bonjour : Affiche un message de bienvenue"
 }
 version_function () {
   echo $version
 }
 about_function () {
-  echo "le prompt est un shell en Bash avec des commandes de base."
+  echo "le prompt est un shell en Bash avec des commandes de base. Il est actuellement en version $version. et il a été développé par Théo Arcelin."
 }
 age_function () {
   echo -n "entrez votre âge : "
