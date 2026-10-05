@@ -1,0 +1,3 @@
+clear_function () {
+  clear
+}

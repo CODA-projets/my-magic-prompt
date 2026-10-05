@@ -1,0 +1,3 @@
+pwd_function () {
+  pwd
+}
